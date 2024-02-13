@@ -1,0 +1,54 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+gap: 20px; 
+
+  
+  @media screen and (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+.image {
+  width:100%;
+height:500px;
+  margin-bottom: 10px;
+}
+
+.image-inner {
+  position: relative;
+  height:500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+.image:hover .image-text {
+  opacity: 1;
+}
